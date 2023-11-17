@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: rendered-output
+
+website:
+  title: "azure-vm-template"
+  sidebar:
+    style: "docked"
+    search: true
+    collapse-level: 1
+    tools:
+      - icon: github
+        href: "https://github.com/vr-data-science/azure-vm-template"
+        aria-label: GitHub
+    contents:
+      - href: index.ipynb
+        text: Project Overview
+      - auto: Github
+        text: All Things Github
+      - auto: Other
+        text: All Things Random
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
