@@ -12,7 +12,7 @@ def test_data_splitting(data_splitter):
 
 def test_no_test_set(data_splitter):
     data_splitter.split_data(create_test_set=False)
-    assert data_splitter.X_test is None
+    assert data_splitter.X_test is None and data_splitter.y_test is None
 
 
 def test_fit_transform(data_preprocessor, data_splitter):
@@ -20,7 +20,7 @@ def test_fit_transform(data_preprocessor, data_splitter):
     transformed_train = data_preprocessor.fit_transform(data_splitter.X_train)
     assert transformed_train is not None
     assert (
-        "x12" not in transformed_train.columns
+        transformed_train["x12"].dtype != object
     )  # Assuming x12 was a column to convert
 
 
@@ -29,5 +29,5 @@ def test_transform(data_preprocessor, data_splitter):
     transformed_valid = data_preprocessor.transform(data_splitter.X_valid)
     assert transformed_valid is not None
     assert (
-        "x63" not in transformed_valid.columns
+        transformed_valid["x63"].dtype != object
     )  # Assuming x63 was a column to convert

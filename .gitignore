@@ -168,17 +168,8 @@ quarto/_site/*
 
 # Quarto
 .quarto
-
 /dev_nbs/
-.databricks
 /docs/rendered-output/*
 /nbs/plots/*
-
-*scratch_pad.md
-
-terraform/.terraform/*
-terraform/.terraform.lock.hcl
-
-
 notes.md
 workspace.ipynb

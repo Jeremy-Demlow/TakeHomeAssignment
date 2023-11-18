@@ -72,6 +72,10 @@ class DataSplitter:
             self.splits["test"] = (x_test.index, y_test.index)
         else:
             x_train, y_train = x_train_full, y_train_full
+            self.X_test, self.y_test = (
+                None,
+                None,
+            )  # Explicitly set to None when not creating a test set
 
         self.splits["train"] = (x_train.index, y_train.index)
         self.splits["valid"] = (x_val.index, y_val.index)
