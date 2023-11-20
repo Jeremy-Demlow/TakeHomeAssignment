@@ -1,0 +1,66 @@
+version: '3.8'
+
+volumes:
+  grafana_data: {}
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1313:1313"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - .:/app
+    command: uvicorn statefarm.app.main:app --host 0.0.0.0 --port 1313 --reload
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana
+    user: "472"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana/data:/var/lib/grafana
+      - ./grafana/provisioning/dashboards/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboards.yaml:ro
+      - ./grafana/provisioning/datasources/datasources.yml:/etc/grafana/provisioning/datasources/datasources.yaml:ro
+      - ./grafana/provisioning/dashboards/default:/var/lib/grafana/dashboards
+    environment:
+      GF_SECURITY_ADMIN_USER: "statefarm"
+      GF_SECURITY_ADMIN_PASSWORD: "statefarm"
+    # restart: always
+    depends_on:
+      - prometheus
+
+  # To add these would take time it would make more dashboards we are just going to have a simple dashboard in our Granfa for now
+  # This would help for more logging and more specific logging just like we would want a presisting database, but this is a take home
+  # elasticsearch:
+  #   image: docker.elastic.co/elasticsearch/elasticsearch:7.9.3
+  #   environment:
+  #     - discovery.type=single-node
+  #   ports:
+  #     - "9200:9200"
+
+  # logstash:
+  #   image: docker.elastic.co/logstash/logstash:7.9.3
+  #   ports:
+  #     - "5001:5000"
+  #   depends_on:
+  #     - elasticsearch
+  #   volumes:
+  #     - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+
+  # kibana:
+  #   image: docker.elastic.co/kibana/kibana:7.9.3
+  #   ports:
+  #     - "5601:5601"
+  #   depends_on:
+  #     - elasticsearch

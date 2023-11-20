@@ -9,6 +9,13 @@ async def test_predict(client, sample_data):
 
 
 @pytest.mark.asyncio
+async def test_batch_predict_simple(client, sample_data):
+    response = await client.post("/batch_predict_simple", json=sample_data)
+    assert response.status_code == 200
+    assert isinstance(response.json(), list)
+
+
+@pytest.mark.asyncio
 async def test_batch_predict(client, sample_data):
     response = await client.post("/batch_predict", json=sample_data)
     assert response.status_code == 200

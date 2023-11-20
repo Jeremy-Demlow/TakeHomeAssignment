@@ -45,14 +45,12 @@ class LogisticRegressionAnalysis:
         )
         self.exploratory_LR.fit(df.drop(columns=[target_column]), df[target_column])
 
-        # Extract coefficients
         results = pd.DataFrame(df.drop(columns=[target_column]).columns).rename(
             columns={0: "name"}
         )
         results["coefs"] = self.exploratory_LR.coef_[0]
         results["coefs_squared"] = results["coefs"] ** 2
 
-        # Select top 25 variables
         self.variables = results.nlargest(25, "coefs_squared")["name"].tolist()
 
         logging.info("Selected Variables: %s", self.variables)

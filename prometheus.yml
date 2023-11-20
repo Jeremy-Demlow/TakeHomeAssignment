@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 15s
+  external_labels:
+    monitor: 'statefarm-monitor'
+
+scrape_configs:
+  - job_name: 'statefarm'
+    static_configs:
+      - targets: ['api:1313']

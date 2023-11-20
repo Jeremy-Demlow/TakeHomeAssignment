@@ -1,0 +1,143 @@
+// Close to what I would want for a histogram of predictions needs some more tweaking
+// {
+//     "annotations": {
+//       "list": [
+//         {
+//           "builtIn": 1,
+//           "datasource": "-- Grafana --",
+//           "enable": true,
+//           "hide": true,
+//           "iconColor": "rgba(0, 211, 255, 1)",
+//           "name": "Annotations & Alerts",
+//           "type": "dashboard"
+//         }
+//       ]
+//     },
+//     "editable": true,
+//     "gnetId": null,
+//     "graphTooltip": 0,
+//     "id": null,
+//     "links": [],
+//     "panels": [
+//       {
+//         "datasource": "Prometheus",
+//         "fieldConfig": {
+//           "defaults": {
+//             "thresholds": {
+//               "steps": [
+//                 {
+//                   "color": "green",
+//                   "value": null
+//                 },
+//                 {
+//                   "color": "red",
+//                   "value": 80
+//                 }
+//               ]
+//             }
+//           }
+//         },
+//         "gridPos": {
+//           "h": 9,
+//           "w": 12,
+//           "x": 0,
+//           "y": 0
+//         },
+//         "id": 1,
+//         "options": {
+//           "displayMode": "gradient",
+//           "orientation": "horizontal",
+//           "showUnfilled": true
+//         },
+//         "targets": [
+//           {
+//             "expr": "increase(prediction_phats_bucket[5m])",
+//             "interval": "",
+//             "legendFormat": "{{le}}",
+//             "refId": "A"
+//           }
+//         ],
+//         "title": "Prediction Probability Distribution",
+//         "type": "bargauge"
+//       },
+//       {
+//         "datasource": "Elasticsearch",
+//         "gridPos": {
+//           "h": 9,
+//           "w": 12,
+//           "x": 12,
+//           "y": 0
+//         },
+//         "id": 2,
+//         "options": {
+//           "showHeader": true
+//         },
+//         "targets": [
+//           {
+//             "refId": "A",
+//             "metrics": [
+//               {
+//                 "field": "phat",
+//                 "id": "1",
+//                 "type": "avg"
+//               }
+//             ],
+//             "query": "type:prediction_log",
+//             "bucketAggs": [
+//               {
+//                 "field": "@timestamp",
+//                 "id": "2",
+//                 "settings": {
+//                   "interval": "5m"
+//                 },
+//                 "type": "date_histogram"
+//               }
+//             ],
+//             "timeField": "@timestamp"
+//           }
+//         ],
+//         "title": "Individual Predictions Log",
+//         "type": "table"
+//       }
+//     ],
+//     "refresh": "5s",
+//     "schemaVersion": 27,
+//     "style": "dark",
+//     "tags": [],
+//     "templating": {
+//       "list": []
+//     },
+//     "time": {
+//       "from": "now-6h",
+//       "to": "now"
+//     },
+//     "timepicker": {
+//       "refresh_intervals": [
+//         "5s",
+//         "10s",
+//         "30s",
+//         "1m",
+//         "5m",
+//         "15m",
+//         "30m",
+//         "1h",
+//         "2h",
+//         "1d"
+//       ],
+//       "time_options": [
+//         "5m",
+//         "15m",
+//         "1h",
+//         "6h",
+//         "12h",
+//         "24h",
+//         "2d",
+//         "7d",
+//         "30d"
+//       ]
+//     },
+//     "timezone": "",
+//     "title": "Model Predictions Dashboard",
+//     "uid": "model-predictions",
+//     "version": 1
+//   }

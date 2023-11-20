@@ -20,6 +20,9 @@ uvicorn = "^0.24.0.post1"
 fastapi = "^0.104.1"
 black = "^23.11.0"
 pre-commit = "^3.5.0"
+pip = "^23.3.1"
+prometheus-fastapi-instrumentator = "^6.1.0"
+prometheus-client = "^0.18.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.2"
@@ -31,5 +34,3 @@ black = "^23.10.0"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-# ["poetry-core"]
-# "poetry.core.masonry.api"

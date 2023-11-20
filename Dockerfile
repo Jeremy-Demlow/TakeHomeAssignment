@@ -72,7 +72,7 @@ COPY statefarm/ ./statefarm
 WORKDIR /app/statefarm
 
 # Expose the port FastAPI will run on
-EXPOSE 8080
+EXPOSE 1313
 
 # Run FastAPI server
-CMD ["uvicorn", "statefarm.app.main:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uvicorn", "statefarm.app.main:app", "--host", "0.0.0.0", "--port", "1313"]
