@@ -6,83 +6,83 @@ d = {
         "doc_baseurl": "/azure_vm_template",
         "doc_host": "https://jdemlow.github.io",
         "git_url": "https://github.com/jdemlow/azure_vm_template",
-        "lib_path": "companyname",
+        "lib_path": "statefarm",
     },
     "syms": {
-        "companyname.app.main": {},
-        "companyname.app.models": {},
-        "companyname.core": {
-            "companyname.core.foo": ("core.html#foo", "companyname/core.py")
+        "statefarm.app.main": {},
+        "statefarm.app.models": {},
+        "statefarm.core": {
+            "statefarm.core.foo": ("core.html#foo", "statefarm/core.py")
         },
-        "companyname.data.data_preparation": {
-            "companyname.data.data_preparation.DataPreprocessor": (
+        "statefarm.data.data_preparation": {
+            "statefarm.data.data_preparation.DataPreprocessor": (
                 "load_data.html#datapreprocessor",
-                "companyname/data/data_preparation.py",
+                "statefarm/data/data_preparation.py",
             ),
-            "companyname.data.data_preparation.DataPreprocessor.__init__": (
+            "statefarm.data.data_preparation.DataPreprocessor.__init__": (
                 "load_data.html#datapreprocessor.__init__",
-                "companyname/data/data_preparation.py",
+                "statefarm/data/data_preparation.py",
             ),
-            "companyname.data.data_preparation.DataPreprocessor._convert_columns": (
+            "statefarm.data.data_preparation.DataPreprocessor._convert_columns": (
                 "load_data.html#datapreprocessor._convert_columns",
-                "companyname/data/data_preparation.py",
+                "statefarm/data/data_preparation.py",
             ),
-            "companyname.data.data_preparation.DataPreprocessor.fit_transform": (
+            "statefarm.data.data_preparation.DataPreprocessor.fit_transform": (
                 "load_data.html#datapreprocessor.fit_transform",
-                "companyname/data/data_preparation.py",
+                "statefarm/data/data_preparation.py",
             ),
-            "companyname.data.data_preparation.DataPreprocessor.transform": (
+            "statefarm.data.data_preparation.DataPreprocessor.transform": (
                 "load_data.html#datapreprocessor.transform",
-                "companyname/data/data_preparation.py",
+                "statefarm/data/data_preparation.py",
             ),
-            "companyname.data.data_preparation.DataSplitter": (
+            "statefarm.data.data_preparation.DataSplitter": (
                 "load_data.html#datasplitter",
-                "companyname/data/data_preparation.py",
+                "statefarm/data/data_preparation.py",
             ),
-            "companyname.data.data_preparation.DataSplitter.__init__": (
+            "statefarm.data.data_preparation.DataSplitter.__init__": (
                 "load_data.html#datasplitter.__init__",
-                "companyname/data/data_preparation.py",
+                "statefarm/data/data_preparation.py",
             ),
-            "companyname.data.data_preparation.DataSplitter._extract_splits": (
+            "statefarm.data.data_preparation.DataSplitter._extract_splits": (
                 "load_data.html#datasplitter._extract_splits",
-                "companyname/data/data_preparation.py",
+                "statefarm/data/data_preparation.py",
             ),
-            "companyname.data.data_preparation.DataSplitter.split_data": (
+            "statefarm.data.data_preparation.DataSplitter.split_data": (
                 "load_data.html#datasplitter.split_data",
-                "companyname/data/data_preparation.py",
+                "statefarm/data/data_preparation.py",
             ),
         },
-        "companyname.modeling.models": {
-            "companyname.modeling.models.LogisticRegressionAnalysis": (
+        "statefarm.modeling.models": {
+            "statefarm.modeling.models.LogisticRegressionAnalysis": (
                 "model.html#logisticregressionanalysis",
-                "companyname/modeling/models.py",
+                "statefarm/modeling/models.py",
             ),
-            "companyname.modeling.models.LogisticRegressionAnalysis.__init__": (
+            "statefarm.modeling.models.LogisticRegressionAnalysis.__init__": (
                 "model.html#logisticregressionanalysis.__init__",
-                "companyname/modeling/models.py",
+                "statefarm/modeling/models.py",
             ),
-            "companyname.modeling.models.LogisticRegressionAnalysis.evaluate_model": (
+            "statefarm.modeling.models.LogisticRegressionAnalysis.evaluate_model": (
                 "model.html#logisticregressionanalysis.evaluate_model",
-                "companyname/modeling/models.py",
+                "statefarm/modeling/models.py",
             ),
-            "companyname.modeling.models.LogisticRegressionAnalysis.fit_exploratory_model": (
+            "statefarm.modeling.models.LogisticRegressionAnalysis.fit_exploratory_model": (
                 "model.html#logisticregressionanalysis.fit_exploratory_model",
-                "companyname/modeling/models.py",
+                "statefarm/modeling/models.py",
             ),
-            "companyname.modeling.models.LogisticRegressionAnalysis.fit_final_model": (
+            "statefarm.modeling.models.LogisticRegressionAnalysis.fit_final_model": (
                 "model.html#logisticregressionanalysis.fit_final_model",
-                "companyname/modeling/models.py",
+                "statefarm/modeling/models.py",
             ),
         },
-        "companyname.scripts.train_model": {
-            "companyname.scripts.train_model.train_model": (
+        "statefarm.scripts.train_model": {
+            "statefarm.scripts.train_model.train_model": (
                 "main.html#train_model",
-                "companyname/scripts/train_model.py",
+                "statefarm/scripts/train_model.py",
             )
         },
-        "companyname.tests.conftest": {},
-        "companyname.tests.test_api": {},
-        "companyname.tests.test_hello_world": {},
-        "companyname.tests.test_preprocessing": {},
+        "statefarm.tests.conftest": {},
+        "statefarm.tests.test_api": {},
+        "statefarm.tests.test_hello_world": {},
+        "statefarm.tests.test_preprocessing": {},
     },
 }

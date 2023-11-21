@@ -1,13 +1,13 @@
 import unittest
 from unittest.mock import patch, MagicMock
 import pandas as pd
-from companyname.modeling.models import (
+from statefarm.modeling.models import (
     LogisticRegressionAnalysis,
 )  # Replace with the actual import
 
 
 class TestLogisticRegressionAnalysis(unittest.TestCase):
-    @patch("companyname.modeling.models.LogisticRegression")
+    @patch("statefarm.modeling.models.LogisticRegression")
     def test_fit_exploratory_model(self, MockLR):
         analysis = LogisticRegressionAnalysis()
         df = pd.DataFrame({"x1": [0.1, 0.2, 0.3], "x2": [1, 2, 3], "y": [0, 1, 0]})
@@ -20,7 +20,7 @@ class TestLogisticRegressionAnalysis(unittest.TestCase):
         MockLR.assert_called_once()
         mock_lr_instance.fit.assert_called_once()
 
-    @patch("companyname.modeling.models.sm.Logit")
+    @patch("statefarm.modeling.models.sm.Logit")
     def test_fit_final_model(self, MockLogit):
         analysis = LogisticRegressionAnalysis()
         df = pd.DataFrame({"x1": [0.1, 0.2, 0.3], "x2": [1, 2, 3], "y": [0, 1, 0]})
