@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "companyname"
+name = "statefarm"
 version = "0.1.0"
-description = "companyname take home"
+description = "statefarm take home"
 authors = ["JeremyDemlow <Jeremy.Demlow@gmail.com>"]
 readme = "README.md"
 

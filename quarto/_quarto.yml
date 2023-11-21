@@ -3,14 +3,14 @@ project:
   output-dir: rendered-output
 
 website:
-  title: "companyname"
+  title: "statefarm"
   sidebar:
     style: "docked"
     search: true
     collapse-level: 1
     tools:
       - icon: github
-        href: "https://github.com/companyname/"
+        href: "https://github.com/statefarm/"
         aria-label: GitHub
     contents:
       - href: index.ipynb

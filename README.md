@@ -1,4 +1,4 @@
-# Welcome to the companyname MLE Take-Home Assignment
+# Welcome to the statefarm MLE Take-Home Assignment
 
 In this project, we embark on a journey to transform a Jupyter Notebook, originally used for exploratory data analysis and preliminary modeling, into a robust, semi-production ready API process. The core of this project is a machine learning model developed to address some sort of business outcome that a customer will purchase or not purchase a product. This model, initially prototyped in a Jupyter Notebook, represents a critical step in our efforts to leverage data science.
 
@@ -61,7 +61,7 @@ To start, ensure you have `poetry` installed on your computer. We use poetry as 
 Run the following command to train your model. It automatically saves the model and preprocessor in the designated directories:
 
 ```python
-python companyname/scripts/train_model.py --data_path 'companyname/files/data/exercise_26_train.csv' --model_save_path 'companyname/files/models/logistic_regression_model.pkl' --preprocessor_save_path 'companyname/files/models/preprocessor.pkl'
+python statefarm/scripts/train_model.py --data_path 'statefarm/files/data/exercise_26_train.csv' --model_save_path 'statefarm/files/models/logistic_regression_model.pkl' --preprocessor_save_path 'statefarm/files/models/preprocessor.pkl'
 ```
 
 ### Step 2: Poetry Dependent Run Test Locally
@@ -75,12 +75,12 @@ Result:
 ======================================= 7 passed, 4 skipped, 8 warnings in 1.68s ========================================
 Name                                 Stmts   Miss  Cover   Missing
 ------------------------------------------------------------------
-companyname/__init__.py                    1      0   100%
-companyname/app/__init__.py                0      0   100%
-companyname/data/__init__.py               0      0   100%
-companyname/data/data_preparation.py      73      3    96%   178, 198, 236
-companyname/modeling/__init__.py           0      0   100%
-companyname/modeling/models.py            34      0   100%
+statefarm/__init__.py                    1      0   100%
+statefarm/app/__init__.py                0      0   100%
+statefarm/data/__init__.py               0      0   100%
+statefarm/data/data_preparation.py      73      3    96%   178, 198, 236
+statefarm/modeling/__init__.py           0      0   100%
+statefarm/modeling/models.py            34      0   100%
 test_api_script.py                      23     18    22%   6-12, 15-27
 ------------------------------------------------------------------
 TOTAL
@@ -105,8 +105,8 @@ Here's what you'll find running on your local setup:
 - **FastAPI Documentation**: Accessible at [API Home Page](http://localhost:1313/) or [API Docs](http://localhost:1313/doc).
 - **Prometheus Monitoring**: View metrics at [Home Page](http://localhost:9090/).
 - **Grafana Dashboard**: Accessible at [Home Page](http://localhost:3000/).
-  - **Username**: companyname
-  - **Password**: companyname
+  - **Username**: statefarm
+  - **Password**: statefarm
   - Navigate to the dashboards where you will see a simple dashboard showing how many API calls were called.
 
 

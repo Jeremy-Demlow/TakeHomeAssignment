@@ -45,7 +45,7 @@ RUN --mount=type=cache,target=/root/.cache \
 # ADD Your Code Here
 WORKDIR /app
 COPY poetry.lock pyproject.toml ./
-COPY companyname/ ./companyname/
+COPY statefarm/ ./statefarm/
 
 # install runtime deps to VIRTUAL_ENV
 RUN --mount=type=cache,target=/root/.cache \
@@ -68,11 +68,11 @@ COPY --from=builder-base $VIRTUAL_ENV $VIRTUAL_ENV
 # Copy application code and model file
 WORKDIR /app
 COPY poetry.lock pyproject.toml ./
-COPY companyname/ ./companyname
-WORKDIR /app/companyname
+COPY statefarm/ ./statefarm
+WORKDIR /app/statefarm
 
 # Expose the port FastAPI will run on
 EXPOSE 1313
 
 # Run FastAPI server
-CMD ["uvicorn", "companyname.app.main:app", "--host", "0.0.0.0", "--port", "1313"]
+CMD ["uvicorn", "statefarm.app.main:app", "--host", "0.0.0.0", "--port", "1313"]

@@ -31,7 +31,7 @@ website:
     collapse-level: 1
     tools:
       - icon: github
-        href: "companyname.com"
+        href: "statefarm.com"
         aria-label: GitHub
     contents:
       - href: index.qmd
