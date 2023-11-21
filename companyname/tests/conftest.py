@@ -3,13 +3,13 @@ import pytest
 
 import numpy as np
 import pandas as pd
-from statefarm.data.data_preparation import DataSplitter, DataPreprocessor
-from statefarm import app
+from companyname.data.data_preparation import DataSplitter, DataPreprocessor
+from companyname import app
 
 
 @pytest.fixture(scope="module")
 def sample_dataframe():
-    return pd.read_csv("statefarm/files/data/exercise_26_train.csv").head(1000)
+    return pd.read_csv("companyname/files/data/exercise_26_train.csv").head(1000)
 
 
 @pytest.fixture(scope="function")

@@ -14,7 +14,7 @@ services:
       - PYTHONUNBUFFERED=1
     volumes:
       - .:/app
-    command: uvicorn statefarm.app.main:app --host 0.0.0.0 --port 1313 --reload
+    command: uvicorn companyname.app.main:app --host 0.0.0.0 --port 1313 --reload
 
   prometheus:
     image: prom/prometheus
@@ -34,8 +34,8 @@ services:
       - ./grafana/provisioning/datasources/datasources.yml:/etc/grafana/provisioning/datasources/datasources.yaml:ro
       - ./grafana/provisioning/dashboards/default:/var/lib/grafana/dashboards
     environment:
-      GF_SECURITY_ADMIN_USER: "statefarm"
-      GF_SECURITY_ADMIN_PASSWORD: "statefarm"
+      GF_SECURITY_ADMIN_USER: "companyname"
+      GF_SECURITY_ADMIN_PASSWORD: "companyname"
     # restart: always
     depends_on:
       - prometheus

@@ -6,8 +6,8 @@ import os
 import pandas as pd
 import joblib
 
-from statefarm.data.data_preparation import DataSplitter, DataPreprocessor
-from statefarm.modeling.models import LogisticRegressionAnalysis
+from companyname.data.data_preparation import DataSplitter, DataPreprocessor
+from companyname.modeling.models import LogisticRegressionAnalysis
 
 
 def train_model(data_path, model_save_path, preprocessor_save_path):

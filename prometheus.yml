@@ -1,9 +1,9 @@
 global:
   scrape_interval: 15s
   external_labels:
-    monitor: 'statefarm-monitor'
+    monitor: 'companyname-monitor'
 
 scrape_configs:
-  - job_name: 'statefarm'
+  - job_name: 'companyname'
     static_configs:
       - targets: ['api:1313']

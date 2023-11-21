@@ -14,7 +14,7 @@ def send_request(file_path, url, total):
 
 
 def main():
-    file_path = "statefarm/files/data/exercise_26_test.csv"
+    file_path = "companyname/files/data/exercise_26_test.csv"
     url_simple = "http://0.0.0.0:1313/batch_predict_simple"
     url = "http://0.0.0.0:1313/batch_predict"
 
